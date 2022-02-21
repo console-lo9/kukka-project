@@ -2,19 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>kukka</title>
     <link rel="stylesheet" href="./public/styles/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css"
+    />
+    <!--[if IE 9]>
+      <link href="css/bootstrap-ie9.css" rel="stylesheet" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <link href="css/bootstrap-ie8.css" rel="stylesheet" />
+      <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3"></script>
+    <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/public/scripts/flower.js" defer></script>
   </head>
 
   <body>
-    <div class="container">
+    <div class="App__container">
       <header>header</header>
-      <div>
-        <section>video</section>
+      <div class="section__container">
         <section>
-          flower Class
+          <iframe
+            class="video__youtube"
+            src="https://www.youtube.com/embed/4-eFPCvI1yk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+        
+        <section>
           <div class="flower-container">
             <div class="flower-contents-head">
               <h3>꽃과 함께 하는 일상, <b>플라워클래스</b></h3>
@@ -47,11 +69,176 @@
           <button class="btn next">+</button>
           <button class="btn prev">-</button>
         </section>
-        <section>banner</section>
+        <section>
+          <div class="d-flex flex-row">
+            <div class="p-2 banner__image">
+              <span class="banner__left_img real_img"></span>
+              <strong class="banner__name">꾸까 브랜드 이야기</strong>
+              <div class="banner__desc">
+                <p>꽃으로 라이프스타일을 만들어가는</p>
+                <p>kukka의 문화를 소개해요.</p>
+                <span class="banner_button">Brand story</span>
+              </div>
+            </div>
+            <div class="p-2 banner__image">
+              <span class="banner__right_img real_img"></span>
+              <strong class="banner__name">꾸까 오프라인 쇼룸</strong>
+              <div class="banner__desc">
+                <p>꽃을 가까이서 만져보고 향기도 맡아보고,</p>
+                <p>꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸</p>
+                <span class="banner_button">꾸까 쇼룸 안내</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <footer id="footer">footer</footer>
+      <footer class="footer">
+        <!-- mobile버전에서 nav 추가 -->
+        <nav></nav>
+        <div class="footer-wrap">
+          <div class="footer-inner">
+            <nav class="section-info__sns">
+              <a
+                href="https://ko-kr.facebook.com/kukka.kr/"
+                target="_blank"
+                class="sns facebook link"
+                ><span>Facebook</span></a
+              >
+              <a
+                href="https://www.instagram.com/kukkakorea/"
+                target="_blank"
+                class="sns instagram link"
+                ><span>Instagram</span></a
+              >
+              <a
+                href="https://www.youtube.com/channel/UC_zQakXCUPvjcfsU067zyCQ?view_as=subscriber"
+                target="_blank"
+                class="sns youtube link"
+                ><span>Youtube</span></a
+              >
+            </nav>
+            <dl class="section-info__contact">
+              <dt>꾸까 고객센터</dt>
+              <dd class="contact-tel">
+                <span class="blind">유선전화번호 : </span>
+                1661-1031
+              </dd>
+              <dd class="contact-time">
+                <span class="blind">운영시간 안내 : </span>(평일 10:00 - 13:00,
+                14:00 - 18:00 / 주말 & 공휴일 제외)
+              </dd>
+              <dd class="contact-partner__tel">
+                기업제휴 문의 : 070-4238-8251
+              </dd>
+            </dl>
+            <nav class="section-info__faq">
+              <a
+                href="https://kukka.kr/faq/"
+                class="link faq__center"
+                target="_blank"
+                >꾸까 고객센터 ></a
+              >
+            </nav>
+            <dl class="section-info__about">
+              <dt class="logo"><span class="blind">꾸까</span></dt>
+              <dd>상호명 : 꾸까(kukka)</dd>
+              <dd>사업자 등록번호 : 264-81-32594</dd>
+              <dd class="end">대표자 : 박춘화</dd>
+              <br class="only_pc" />
+              <dd>
+                <address>
+                  소재지: 서울시 서초구 남부순환로333길 10 kukka
+                </address>
+              </dd>
+              <dd>
+                <a
+                  href="https://kukka.kr/disclosure/?next=/"
+                  class="link"
+                  target="_blank"
+                  >기업공시</a
+                >
+              </dd>
+              <dd class="end">통신판매신고번호 2018-서울서초-1692</dd>
+              <br class="only_pc" />
+              <dd><copy>© 2014-2021 kukka, Inc. All rights reserved.</copy></dd>
+            </dl>
+            <nav class="section-info__etc">
+              <a
+                href="https://kukka.kr/agreement/?next=/"
+                class="link"
+                target="_blank"
+                >이용약관</a
+              >
+              <a
+                href="https://kukka.kr/privacy/?next=/"
+                class="link"
+                target="_blank"
+                >개인정보 처리방침</a
+              >
+              <a href="https://partners.kukka.kr/" class="link" target="_blank"
+                >제휴안내</a
+              >
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <div class="modal"></div>
+    <div class="popup">
+      <div class="popup-inner">
+        <div>
+          <img
+            src="https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassContentsProductImage/663/0_1.jpg"
+            alt="popup-img1"
+          />
+        </div>
+        <div class="popup-close">
+          <input class="close__check-box" type="checkbox" /><span
+            class="close__desc"
+            >오늘은 더 이상 보지 않기</span
+          >
+          <div id="close-popup-btn" class="close__btn">X</div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    function getCookie() {
+      var cookieData = document.cookie;
+      if (cookieData.indexOf("todayCookie=done") < 0) {
+        $(".popup").show();
+      } else {
+        $(".popup").hide();
+      }
+    }
+
+    $(document).ready(function () {
+      $(".popup").show();
+      getCookie();
+    });
+
+    $("#close-popup-btn").click(function () {
+      const isNoMoreToday = $(".close__check-box")[0].checked;
+      function setCookieToday(name, value, expireDays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expireDays);
+
+        document.cookie =
+          name +
+          "=" +
+          escape(value) +
+          "; path=/; expires=" +
+          todayDate.toUTCString() +
+          ";";
+      }
+
+      if (isNoMoreToday === true) {
+        setCookieToday("todayCookie", "done", 1);
+        $(".popup").hide();
+      } else {
+        $(".popup").hide();
+      }
+    });
+  </script>
 </html>

@@ -1,8 +1,9 @@
 var navItems = document.querySelectorAll(".item");
 var videoSection = document.querySelector(".section__video");
-var flowerClassSection = document.querySelector(".section__flowerclass");
+var flowerClassSection = document.querySelector(".section__flower");
 var header = document.querySelector(".header");
 var headerRect = header.getBoundingClientRect();
+console.log(header);
 
 var handleUpScroll = (y, endPoint) => {
   var scroll = setInterval(() => {
@@ -28,17 +29,18 @@ var handleDownScroll = (y, endPoint) => {
 };
 
 var handleClick = (e) => {
+  console.log(e.target);
   var target = e.target;
   var currentY = window.scrollY;
   var endPointVideo = videoSection.offsetTop - 90;
   var endPointFC = flowerClassSection.offsetTop - headerRect.height;
-  if (target.classList.contains("video")) {
+  if (target.classList.contains("menu--video")) {
     if (currentY <= endPointVideo) {
       handleDownScroll(currentY, endPointVideo);
     } else {
       handleUpScroll(currentY, endPointVideo);
     }
-  } else if (target.classList.contains("flowerclass")) {
+  } else if (target.classList.contains("menu--flower")) {
     if (currentY <= endPointFC) {
       handleDownScroll(currentY, endPointFC);
     } else {

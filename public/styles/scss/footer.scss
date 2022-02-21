@@ -2,15 +2,25 @@
   display: none;
 }
 
+.link {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
 .only_pc {
   outline: 1px solid #f7f7f7;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   margin: 0 auto;
+  background-color: #222;
+  color: #3a3a3a;
+
+  @media (min-width: 1024px) {
+    margin: 0;
+    padding: 0 60px;
+  }
 }
 
 .footer .footer-wrap .footer-inner {
@@ -53,11 +63,6 @@ nav.section-info__faq::after {
   margin: 0 10px 0 20px;
 }
 
-.footer {
-  background-color: #3a3a3a;
-  color: #3a3a3a;
-}
-
 .footer-wrap {
   margin-top: 52px;
   background: #222;
@@ -72,10 +77,6 @@ nav.section-info__faq::after {
   width: 150px;
   height: 63px;
   background-size: 1252px;
-}
-
-.link {
-  color: #f7f7f7;
 }
 
 .faq__center {
@@ -167,13 +168,5 @@ nav.section-info__faq::after {
     content: "";
     display: block;
     clear: both;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 60px;
   }
 }

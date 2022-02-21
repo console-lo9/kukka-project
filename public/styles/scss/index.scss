@@ -2,7 +2,16 @@
 @include vanilla;
 
 @import "./reset.scss";
+@import "./video.scss";
 
 body {
   background-color: white;
+}
+.App__container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }

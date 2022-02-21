@@ -4,7 +4,20 @@
 @import "./reset.scss";
 @import "./footer.scss";
 @import "./popup.scss";
+@import "./banner.scss";
 
 body {
   background-color: white;
+}
+
+.App__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__container {
+  width: 100%;
 }

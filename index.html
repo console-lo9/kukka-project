@@ -25,29 +25,30 @@
 
   <body>
     <div class="App__container">
-      <header class="header">
+      <div class="header">
         <div class="header__container">
           <h1 class="header__logobox">
               <a href="/">
+                <!-- 모바일에선 mobile__logo로 변경 -->
                   <img class="logo--desktop" src="./public/assets/desktop__logo.png" alt="desktop__logo">
               </a>
           </h1>
-          <nav class="header__navbar">
+          <div class="header__navbar">
               <ul class="header__navbar--list">
                   <li class="item menu--video">동영상</li>
                   <li class="item menu--flower">플라워클래스</li>
               </ul>
-          </nav>
-          <nav class="header__navicon">
+          </div>
+          <div class="header__navicon">
               <a class="navicon--link">
                   <img class="navicon" src="./public/assets/profile.png" alt="profile">
               </a>
               <a class="navicon--link">
                   <img class="navicon" src="./public/assets/cart.png" alt="cart">
               </a>
-          </nav>
+          </div>
         </div>
-      </header>
+      </div>
       <div class="section__container">
         <section class="section__video">
           <iframe

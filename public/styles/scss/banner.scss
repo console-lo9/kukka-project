@@ -20,28 +20,39 @@ $right-img: url("../../assets/banner_right.png");
     width: 50%;
 
     padding: 0 !important;
-    // &:nth-child(1) {
-    //   background: linear-gradient(90deg, $banner-color 0%, $transparent 80%);
-    // }
-    &:nth-child(2) {
-      background: linear-gradient(90deg, $transparent 20%, $banner-color 100%);
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+      .real_img {
+        -webkit-transform: scale(1.05); /*  크롬 */
+        -moz-transform: scale(1.05); /* FireFox */
+        -o-transform: scale(1.05); /* Opera */
+        transform: scale(1.05);
+      }
     }
     .real_img {
       height: inherit;
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-size: cover !important;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+
+      display: block;
+      transition: transform 0.2s ease-out 0s;
     }
     .banner__left_img {
       background: linear-gradient(90deg, $banner-color 0%, $transparent 80%),
         $left-img;
     }
     .banner__right_img {
-      background: linear-gradient(90deg, $banner-color 0%, $transparent 80%),
+      background: linear-gradient(90deg, $transparent 20%, $banner-color 100%),
         $right-img;
-      transform: scaleX(-1);
     }
     .banner__name {
       width: 100%;

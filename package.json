@@ -1,0 +1,16 @@
+{
+  "name": "kukka-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-ie8": "^4.3.1",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.6.0",
+    "vanilla-framework": "^3.1.0"
+  },
+  "scripts": {
+    "build-css": "sass -w --load-path=node_modules public/styles/scss:public/styles/css --style=compressed",
+    "watch-css": "yarn build-css && sass --load-path=node_modules -w public/styles/scss:public/styles/css --style=compressed"
+  }
+}

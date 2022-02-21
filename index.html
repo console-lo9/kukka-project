@@ -18,6 +18,61 @@
       <footer id="footer">footer</footer>
     </div>
 
-    <div class="modal"></div>
+    <div class="popup">
+      <div class="popup-inner">
+        <div>
+          <img
+            src="https://kukka-2-media-123.s3.amazonaws.com/media/class-name/ClassContentsProductImage/663/0_1.jpg"
+            alt="popup-img1"
+          />
+        </div>
+        <div class="popup-close">
+          <input class="close__check-box" type="checkbox" /><span
+            class="close__desc"
+            >오늘은 더 이상 보지 않기</span
+          >
+          <div id="close-popup-btn" class="close__btn">X</div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".popup").show();
+    });
+
+    $("#close-popup-btn").click(function () {
+      const isNoMoreToday = $(".close__check-box")[0].checked;
+      function setCookieToday(name, value, expireDays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expireDays);
+
+        document.cookie =
+          name +
+          "=" +
+          escape(value) +
+          "; path=/; expires=" +
+          todayDate.toUTCString() +
+          ";";
+      }
+
+      function getCookie() {
+        var cookieData = document.cookie;
+        if (cookieData.indexOf("todayCookier=done") < 0) {
+          $(".popup").show();
+        } else {
+          $(".popup").hide();
+        }
+      }
+
+      if (isNoMoreToday === true) {
+        setCookieToday("todayCookie", "done", 1);
+        $(".popup").hide();
+      } else {
+        console.log("false");
+        $(".popup").hide();
+      }
+    });
+  </script>
 </html>

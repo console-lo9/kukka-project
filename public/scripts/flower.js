@@ -17,8 +17,8 @@ const price3 = document.getElementById("price-3");
 const slideData = [
   {
     img: "/public/assets/flower_event_1.jpeg",
-    title: "ㅎㅎ",
-    price: "79,000원",
+    title: "롱엔로우 센터피스 (2/3~3/1)",
+    price: "89,000원",
     description: "1월 플라워 클래스",
   },
   {
@@ -34,10 +34,6 @@ const slideData = [
     description: "1월 플라워 클래스",
   },
 ];
-
-//Next 버튼을 누르면
-//data 배열에 있는 객체값들을
-//바꿔서 dom요소에 넣어준다?
 
 var index = 0;
 
@@ -65,7 +61,7 @@ function renderItem(data) {
   text2.innerText = data[1].title;
   text3.innerText = data[2].title;
 
-  price1.innerText = data[0].description;
+  //   price1.innerText = data[0].description;
   price2.innerText = data[1].price;
   price3.innerText = data[2].price;
 }

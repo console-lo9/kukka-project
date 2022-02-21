@@ -1,0 +1,37 @@
+.flower-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.flower-contents-head {
+  b {
+    font-weight: 700;
+  }
+}
+
+.flower-products {
+  padding: 40px 0 120px;
+  .event-class {
+    float: left;
+    width: 50%;
+    padding-right: 2%;
+    a {
+      position: relative;
+      display: block;
+    }
+  }
+}
+.btn {
+  width: 50px;
+  background-color: aquamarine;
+  margin-top: 100px;
+}
+
+.special-class {
+  width: 50%;
+  float: right;
+  div {
+    width: 42%;
+  }
+}

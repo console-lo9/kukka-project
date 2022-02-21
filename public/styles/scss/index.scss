@@ -1,0 +1,9 @@
+@import "vanilla-framework";
+@include vanilla;
+
+@import "./reset.scss";
+@import "./footer.scss";
+
+body {
+  background-color: white;
+}

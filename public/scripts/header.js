@@ -32,7 +32,7 @@ var handleClick = (e) => {
   console.log(e.target);
   var target = e.target;
   var currentY = window.scrollY;
-  var endPointVideo = videoSection.offsetTop - 90;
+  var endPointVideo = videoSection.offsetTop - headerRect.height;
   var endPointFC = flowerClassSection.offsetTop - headerRect.height;
   if (target.classList.contains("menu--video")) {
     if (currentY <= endPointVideo) {

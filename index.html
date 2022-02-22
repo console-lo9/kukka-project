@@ -19,13 +19,45 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/public/scripts/flower.js" defer></script>
+    <script src="/public/scripts/header.js" defer></script>
   </head>
 
   <body>
     <div class="App__container">
-      <header>header</header>
+      <div class="header">
+        <div class="header__container">
+          <h1 class="header__logobox">
+            <a href="/">
+              <!-- 모바일에선 mobile__logo로 변경 -->
+              <img
+                class="logo--desktop"
+                src="./public/assets/desktop__logo.png"
+                alt="desktop__logo"
+              />
+            </a>
+          </h1>
+          <div class="header__navbar">
+            <ul class="header__navbar--list">
+              <li class="item menu--video">동영상</li>
+              <li class="item menu--flower">플라워클래스</li>
+            </ul>
+          </div>
+          <div class="header__navicon">
+            <a class="navicon--link">
+              <img
+                class="navicon"
+                src="./public/assets/profile.png"
+                alt="profile"
+              />
+            </a>
+            <a class="navicon--link">
+              <img class="navicon" src="./public/assets/cart.png" alt="cart" />
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="section__container">
-        <section>
+        <section class="section__video">
           <iframe
             class="video__youtube"
             src="https://www.youtube.com/embed/4-eFPCvI1yk"
@@ -36,7 +68,7 @@
           ></iframe>
         </section>
 
-        <section>
+        <section class="section__flower">
           <div class="flower-container">
             <div class="flower-contents-head">
               <h3>꽃과 함께 하는 일상, <b>플라워클래스</b></h3>

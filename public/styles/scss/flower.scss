@@ -57,6 +57,7 @@ $prev: url("../../assets/button_prev.png");
     }
   }
 }
+
 .special-class {
   display: flex;
   flex-direction: column;
@@ -72,7 +73,6 @@ $prev: url("../../assets/button_prev.png");
   .flower__item {
     display: flex;
     flex-direction: row;
-  
 
     .thumnail {
       position: relative;
@@ -80,15 +80,29 @@ $prev: url("../../assets/button_prev.png");
       left: inherit;
       float: left;
       width: 42%;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transition: all 0.3s ease-in-out;
     }
-
+    .thumnail:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+    }
     .summary {
       display: flex;
       flex-direction: column;
       padding: 0 0 0 20px;
-      white-space: nowrap;
+      overflow: hidden;
+      display: block;
 
       .name {
+        display: block;
         font: {
           size: 16px;
           weight: 500;
@@ -98,6 +112,10 @@ $prev: url("../../assets/button_prev.png");
       }
       .price {
         margin-top: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #222;
       }
     }
   }
@@ -127,4 +145,94 @@ $prev: url("../../assets/button_prev.png");
   top: 30%;
   left: -100px;
   background: $prev;
+}
+
+.tag {
+  margin-top: 15px;
+  a {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 52px;
+    padding: 0 8px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+    border: #ffcd32 1px solid;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.15px;
+    color: #ffcd32;
+  }
+  .gwang {
+    border-color: #a27fde;
+    color: #a27fde;
+  }
+  .jam {
+    border-color: #46cfa7;
+    color: #46cfa7;
+  }
+  .wolgye {
+    border-color: #ffa04d;
+    color: #ffa04d;
+  }
+  .guro {
+    border-color: #68a4fe;
+    color: #68a4fe;
+  }
+
+  .songpa {
+    border-color: #ffcd32;
+    color: #ffcd32;
+  }
+  .dongrae {
+    border-color: #00afe3;
+    color: #00afe3;
+  }
+}
+
+.img {
+  width: 50%;
+  .scale {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all 0.3s ease-in-out; /* 부드러운 모션을 위해 추가*/
+  }
+  .scale:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+  }
+}
+
+.flower-img {
+  .scale {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all 0.3s ease-in-out; /* 부드러운 모션을 위해 추가*/
+  }
+  .scale:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+  }
 }

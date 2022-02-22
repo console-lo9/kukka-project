@@ -14,24 +14,30 @@ const price1 = document.getElementById("price-1");
 const price2 = document.getElementById("price-2");
 const price3 = document.getElementById("price-3");
 
+const showRoomList = document.getElementById("showRoomList");
+const showRoomList1 = document.getElementById("showRoomList-1");
+
 const slideData = [
   {
-    img: "/public/assets/flower_event_1.jpeg",
+    img: "/public/assets/flower_event_1.jpg",
     title: "롱엔로우 센터피스 (2/3~3/1)",
     price: "89,000원",
     description: "1월 플라워 클래스",
+    tag: ["광화문점", "잠실점", "월계점", "구로점"],
   },
   {
     img: "/public/assets/flower_event_2.jpg",
     title: "오아시스 리스(2/21~2/27)",
     price: "79,000원",
     description: "1월 플라워 클래스",
+    tag: ["광화문점", "잠실점", "월계점", "구로점", "송파점", "부산동례점"],
   },
   {
     img: "/public/assets/flower_event_3.jpg",
     title: "클래식 핸드타이드(2/28~3/6)",
     price: "79,000원",
     description: "1월 플라워 클래스",
+    tag: ["잠실점", "월계점", "구로점", "송파점", "부산동례점"],
   },
 ];
 
@@ -48,6 +54,7 @@ btnPrev.addEventListener("click", (event) => {
   if (index < 0) {
     index = 2;
   }
+
   var data = slideData.map((_, i, data) => data[(i + index) % 3]);
   renderItem(data);
 });
@@ -61,7 +68,11 @@ function renderItem(data) {
   text2.innerText = data[1].title;
   text3.innerText = data[2].title;
 
-  //   price1.innerText = data[0].description;
   price2.innerText = data[1].price;
   price3.innerText = data[2].price;
+
+  showRoomList.innerText = data[1].tag;
+  showRoomList1.innerText = data[2].tag;
 }
+
+function renderShowRoom(data) {}
